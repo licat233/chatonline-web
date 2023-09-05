@@ -1,0 +1,11 @@
+img,
+svg {
+    user-select: none !important;
+    -webkit-user-drag: none !important;
+}
+
+.wk-message-base-content img,
+.wk-message-base-content svg {
+    user-select: auto !important;
+    -webkit-user-drag: auto !important;
+}

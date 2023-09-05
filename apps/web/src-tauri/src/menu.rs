@@ -10,7 +10,7 @@ pub fn init(_context: &Context<EmbeddedAssets>) -> Menu {
     // 应用名称
     // let name = &context.package_info().name;
     // tauri::Menu::os_default(name)
-   
+
     let menu = Submenu::new(
         "菜单",
         Menu::new()
@@ -34,9 +34,9 @@ pub fn handler(event: WindowMenuEvent<Wry>) {
                     &apphandle,
                     n2.to_string(),
                     tauri::WindowUrl::App("/".into())
-                ).title("唐僧叨叨").inner_size(1200.0,800.0).build();
+                ).title("快言").inner_size(1200.0,800.0).build();
             });
-           
+
         }
         _ => {}
     }

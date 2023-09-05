@@ -9,12 +9,18 @@ import  { DataSourceModule } from '@tsdaodao/datasource';
 import {ContactsModule} from '@tsdaodao/contacts';
 
 
-if(process.env.NODE_ENV === "development") {
-  WKApp.apiClient.config.apiURL = "https://api.botgate.cn/v1/"
-}else {
-  WKApp.apiClient.config.apiURL = "/api/v1/" // 正式环境地址 (通用打包镜像，用此相对地址),打包出来的镜像可以通过API_URL环境变量来修改API地址
+declare global {
+  interface Window {
+    API_URL: string;
+  }
 }
 
+if (typeof window.API_URL !== "string") {
+   console.error("API_URL undefined");
+   window.API_URL = "/v1/"
+}
+
+WKApp.apiClient.config.apiURL = window.API_URL
 
 WKApp.apiClient.config.tokenCallback = ()=> {
   return WKApp.loginInfo.token
@@ -38,4 +44,3 @@ ReactDOM.render(
   document.getElementById('root')
 );
 reportWebVitals();
-

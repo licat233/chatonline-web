@@ -1,7 +1,7 @@
 
 
  :root {
-    --wk-color-theme: #E46342;
+    --wk-color-theme: #b042e4;
     --wk-color-secondary: rgba(246, 246, 246);
     --wk-color-secondary-2:  rgba(246, 246, 246);
     --wk-color-hover: #eee;
@@ -52,7 +52,7 @@ html {
     height: 100%;
     box-sizing: border-box;
 }
-  
+
   body {
     height: 100%;
     margin: 0;
@@ -70,44 +70,44 @@ html {
     background: var( --background-color);
     color: rgba(9,30,66,.87) ;
 
-    --semi-color-primary: #E46342;
+    --semi-color-primary: #42e4b0;
   }
 
   div {
     outline:none; /** 让div没有焦点边框 不加这个 第一次打开Modal会聚焦**/
   }
-  
+
   #root {
     height: 100%;
   }
-  
+
   code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
   }
-  
-  
+
+
   .page {
     width: 100%;
     height: 100%;
     background-color: rgb(236, 239, 243);
   }
-  
+
   .pageContent {
     padding: 0px 40px;
     overflow-y: auto;
   }
-  
+
     .pageContent.space {
         padding-top: 40px;
         width: 100%;
         height: 100%;
     }
-  
+
   @font-face {
     font-family: "icomoon";
     src: url("./assets/fonts/icomoon.woff2");
   }
-  
+
   [class^=icon-], [class*=" icon-"] {
     font-family: "icomoon" !important;
     speak: none;
@@ -119,9 +119,9 @@ html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-  
-  
-  
+
+
+
   ul {
       list-style-type: none;
       margin-block-start: 0px;
@@ -130,7 +130,7 @@ html {
       margin-inline-end: 0px;
       padding-inline-start: 0px;
   }
-  
+
 
 
   .wk-loading {

@@ -58,7 +58,7 @@
         "fullscreen": false,
         "height": 800,
         "resizable": true,
-        "title": "唐僧叨叨",
+        "title": "快言",
         "width": 1200
       }
     ],
@@ -71,5 +71,5 @@
       "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDkyQUQxQjQ3QzBEMjFBMDYKUldRR0d0TEFSeHV0a21UNDl1Q2ZPZm9lcFdnTCtUTnJWcURIQXdibGxBNndpWHdMY0swWGI4a1AK"
     }
   }
- 
+
 }

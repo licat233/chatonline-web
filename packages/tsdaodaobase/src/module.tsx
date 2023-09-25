@@ -42,6 +42,7 @@ import { TypingManager } from "./Service/TypingManager";
 import APIClient from "./Service/APIClient";
 import { ChannelAvatar } from "./Components/ChannelAvatar";
 import { ScreenshotCell, ScreenshotContent } from "./Messages/Screenshot";
+import ImageToolbar from "./Components/ImageToolbar";
 
 export default class BaseModule implements IModule {
     id(): string {
@@ -337,8 +338,13 @@ export default class BaseModule implements IModule {
         WKApp.endpoints.registerChatToolbar("chattoolbar.screenshot", (ctx) => {
 
             return <IconClick icon={require("./assets/toolbars/func_screenshot.svg").default} onClick={() => {
-                window.open("https://jietu.qq.com")
+                window.open("https://www.snipaste.com")
             }}></IconClick>
+        })
+
+        WKApp.endpoints.registerChatToolbar("chattoolbar.image", (ctx) => {
+
+            return <ImageToolbar icon={require("./assets/toolbars/func_image_normal.svg").default} conversationContext={ctx}></ImageToolbar>
         })
 
 
@@ -349,7 +355,7 @@ export default class BaseModule implements IModule {
             const isDark = WKApp.config.themeMode === ThemeMode.dark
             return {
                 title: "发起群聊",
-                icon: require(`${isDark ? "./assets/popmenus_startchat_dark.png" : "./assets/popmenus_startchat.png"}`).default,
+                icon: require(`${isDark ? "./assets/popmenus_startchat_dark.png" : "./assets/popmenus_startchat.png"}`),
                 onClick: () => {
                     var selectItems: IndexTableItem[]
                     var finishButtonContext: FinishButtonContext
@@ -806,7 +812,7 @@ export default class BaseModule implements IModule {
                 cell: ListItemIcon,
                 properties: {
                     title: "群二维码",
-                    icon: <img style={{ "width": "24px", "height": "24px" }} src={require("./assets/icon_qrcode.png").default}></img>,
+                    icon: <img style={{ "width": "24px", "height": "24px" }} src={require("./assets/icon_qrcode.png")}></img>,
                     onClick: () => {
                         context.push(<ChannelQRCode channel={channel}></ChannelQRCode>, new RouteContextConfig({
                             title: "群二维码名片",

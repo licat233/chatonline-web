@@ -7,7 +7,7 @@
     "distDir": "../build"
   },
   "package": {
-    "productName": "tangsengdaodao",
+    "productName": "快言",
     "version": "../package.json"
   },
   "tauri": {
@@ -29,7 +29,7 @@
         "icons/icon.icns",
         "icons/icon.ico"
       ],
-      "identifier": "com.tsdaodao.im",
+      "identifier": "com.swifttalk.im",
       "longDescription": "",
       "macOS": {
         "entitlements": null,
@@ -65,10 +65,10 @@
     "updater": {
       "active": true,
       "endpoints": [
-          "https://api.githubim.com/v1/common/updater/{{target}}/{{current_version}}"
+          "https://api.im.catli.net/v1/common/updater/{{target}}/{{current_version}}"
       ],
       "dialog": false,
-      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDkyQUQxQjQ3QzBEMjFBMDYKUldRR0d0TEFSeHV0a21UNDl1Q2ZPZm9lcFdnTCtUTnJWcURIQXdibGxBNndpWHdMY0swWGI4a1AK"
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDZBMTE4M0I5NkFGNkZGQwpSV1Q4YjYrV094aWhCbW41K3VWRkhtdVFIN3FjSFZWTHlwbVhqRXlGWTAxak5mWWFScFdzVzFuWAo="
     }
   }
 

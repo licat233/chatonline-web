@@ -114,7 +114,7 @@ export default class MessageBase extends Component<MessageBaseProps, any> {
         return newBubbleStyle
     }
 
- 
+
 
     onMessageRevoke() {
         const { message } = this.props
@@ -179,7 +179,6 @@ export default class MessageBase extends Component<MessageBaseProps, any> {
             case MessageReasonCode.reasonSystemError:
                 return "系统错误"
         }
-
     }
 
     render() {

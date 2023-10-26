@@ -8,7 +8,8 @@ import  { LoginModule } from '@tsdaodao/login';
 import  { DataSourceModule } from '@tsdaodao/datasource';
 import {ContactsModule} from '@tsdaodao/contacts';
 
-const apiURL = "https://api.im.catli.net/v1/"
+const currentProtocol = window.location.protocol || "";
+const apiURL = currentProtocol + "//api.im.mixbench.net/v1/"
 
 if(!(window as any).__TAURI_IPC__) { // tauri环境
   if(process.env.NODE_ENV === "development") {
